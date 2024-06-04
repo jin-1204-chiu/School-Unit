@@ -19,7 +19,7 @@ a {
 		/*header要占據6欄*/
 		'nav nav nav nav nav'
 		/*nav要占據6欄*/
-		'middle middle middle middle middle'
+		'left middle middle middle right'
 		/*left占1欄，middle占4欄，right占1欄*/
 		'footer footer footer footer footer';
 	/*footer要占據6欄*/
@@ -191,7 +191,7 @@ ul {
 .middle {
 	/*grid中間的欄*/
 	grid-area: middle;
-	background-color: #eaf4f4;
+	
 	border-radius: 10px;
 	position: relative;
 }
@@ -246,7 +246,10 @@ h1 {
 	border-top: solid 2px #f7e8dd;
 	border-bottom: solid 2px #f7e8dd;
 }
-
+.carousel-inner > .item > img{
+	width: 80%;
+	margin: auto;
+}
 h1:before,
 h1:after {
 	content: '';
