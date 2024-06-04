@@ -14,7 +14,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Kosugi&family=M+PLUS+1:wght@100..900&family=Monomaniac+One&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 	
-		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+		
 	<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	
@@ -186,27 +186,112 @@
 				</div>
 			</div>
 			<br>
-			<h1 style="text-align: center;">布告欄</h1>
-			<div class="container" style="background-color: #f3f5e9; border-radius: 10px;">
-
-				<br>
-				<div class="row">
-					<div class="col">
-						<a href="#page1" class="#page1">徐正泰</a>
-					</div>
-					<div class="col">
-						<a href="#page2" class="#page2">徐正泰</a>
-					</div>
-					<div class="col">
-						3
-					</div>
-					<div class="col">
-						4
-					</div>
-				</div>
-				<br>
-				<div data-role="div" id="page1">
-					<ul>
+			<h1 style="text-align: center;">佈告欄</h1>
+			
+			<ul class="nav nav-pills mb-3 container" id="pills-tab" role="tablist">
+              <li class="nav-item col" role="presentation">
+                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">最近消息</button>
+              </li>
+              <li class="nav-item col" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">總務處</button>
+              </li>
+              <li class="nav-item col" role="presentation">
+                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">教務處</button>
+              </li>
+              <li class="nav-item col" role="presentation">
+                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-student" type="button" role="tab" aria-controls="pills-student" aria-selected="false">學務處</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                  <ul>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal">雄女段考第一名</button>
+							<div class="modal fade" id="exampleModal">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">詳細資訊如下</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>第一名歐家怡</p>
+											<p>第一名邱采嫻</p>
+											<p>第一名林冠穎</p>
+											<p>第一名李月馨</p>
+											
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">掰掰大家</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal">About Me</button>
+							<div class="modal fade" id="exampleModal">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">About Me</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>歡迎來到王小桃部落格</p>
+											<p>用最直白的文字，分享我的旅遊、美食、購物與露營</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal">About Me</button>
+							<div class="modal fade" id="exampleModal">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">About Me</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>歡迎來到王小桃部落格</p>
+											<p>用最直白的文字，分享我的旅遊、美食、購物與露營</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal">About Me</button>
+							<div class="modal fade" id="exampleModal">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">About Me</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>歡迎來到王小桃部落格</p>
+											<p>用最直白的文字，分享我的旅遊、美食、購物與露營</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+              </div>
+              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                  <ul>
 						<li>
 							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal">About Me</button>
 							<div class="modal fade" id="exampleModal">
@@ -288,9 +373,9 @@
 							</div>
 						</li>
 					</ul>
-				</div>
-				<div data-role="div" id="page2">
-					<ul>
+              </div>
+              <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <ul>
 						<li>
 							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal">About Me</button>
 							<div class="modal fade" id="exampleModal">
@@ -351,11 +436,96 @@
 								</div>
 							</div>
 						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal">About Me</button>
+							<div class="modal fade" id="exampleModal">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">About Me</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>歡迎來到王小桃部落格</p>
+											<p>用最直白的文字，分享我的旅遊、美食、購物與露營</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+                </div>
+                    <div class="tab-pane fade" id="pills-student" role="tabpanel" aria-labelledby="pills-student-tab">
+                  <ul>
 						
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal">About Me</button>
+							<div class="modal fade" id="exampleModal">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">About Me</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>歡迎來到王小桃部落格</p>
+											<p>用最直白的文字，分享我的旅遊、美食、購物與露營</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal">About Me</button>
+							<div class="modal fade" id="exampleModal">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">About Me</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>歡迎來到王小桃部落格</p>
+											<p>用最直白的文字，分享我的旅遊、美食、購物與露營</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal">About Me</button>
+							<div class="modal fade" id="exampleModal">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">About Me</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>歡迎來到王小桃部落格</p>
+											<p>用最直白的文字，分享我的旅遊、美食、購物與露營</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
 					</ul>
-				</div>
-			</div>
-
+              </div>
+            </div>
+			
+			
 			<br>
 
 			<div>
