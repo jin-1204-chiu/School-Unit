@@ -6,11 +6,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>高雄女中 文儀萬歲</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/carousel.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="dns-prefetch" href="https://apc.codepen.io">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Kosugi&family=M+PLUS+1:wght@100..900&family=Monomaniac+One&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	
 	<script>
 		$(".jq-goTop").click(function(e) {
 			e.preventDefault();
@@ -29,6 +36,18 @@
 				$(".goTop").addClass("hide");
 			}
 		});
+		//		$('section.awSlider .carousel').carousel({
+		//			pause: "hover",
+		//			interval: 2000
+		//		});
+
+		var startImage = $('section.awSlider .item.active > img').attr('src');
+		$('section.awSlider').append('<img src="' + startImage + '">');
+
+		$('section.awSlider .carousel').on('slid.bs.carousel', function() {
+			var bscn = $(this).find('.item.active > img').attr('src');
+			$('section.awSlider > img').attr('src', bscn);
+		});
 	</script>
 	<!--圖片輪播需用-->
 	<!--bookstrap-->
@@ -37,6 +56,7 @@
 	<!--bookstrap-->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 	<!--圖片輪播需用-->
+
 </head>
 
 <body class="noto-sans-jp-<uniquifier>">
@@ -66,17 +86,64 @@
 
 		</ul>
 	</nav>
+
 	<main class="grid-container">
 
 		<header style="background-image: url(img/kghs.png)">
 			<h1 style="color: aliceblue;text-shadow: 2px 2px 8px black;">高雄市立高雄女子高級中學</h1>
 
 		</header>
+		<!--
+		<section class="awSlider middle">
+		<h1><marquee direction="left" scrollamount="5">跑馬燈測試</marquee></h1>
+			<div class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target=".carousel" data-slide-to="0" class="active"></li>
+					<li data-target=".carousel" data-slide-to="1"></li>
+					<li data-target=".carousel" data-slide-to="2"></li>
+					<li data-target=".carousel" data-slide-to="3"></li>
+				</ol>
+
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<img src="http://www.adobewordpress.com/wp-content/uploads/2014/02/wallpaper-thumb-941.jpg">
+						<div class="carousel-caption">Görsel #1</div>
+					</div>
+					<div class="item">
+						<img src="http://www.adobewordpress.com/wp-content/uploads/2014/02/wallpaper-thumb-101.jpg">
+						<div class="carousel-caption">Görsel #2</div>
+					</div>
+					<div class="item">
+						<img src="http://www.adobewordpress.com/wp-content/uploads/2014/02/wallpaper-thumb-1051.jpg">
+						<div class="carousel-caption">Görsel #3</div>
+					</div>
+					<div class="item">
+						<img src="http://www.adobewordpress.com/wp-content/uploads/2013/07/wallpaper-thumb-74.jpg">
+						<div class="carousel-caption">Görsel #4</div>
+					</div>
+				</div>
+
+				<a class="left carousel-control" href=".carousel" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Geri</span>
+				</a>
+				<a class="right carousel-control" href=".carousel" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">İleri</span>
+				</a>
+			</div>
+		</section>
+-->
 
 
 		<!--圖片輪播-->
+
 		<section class="middle">
-			<h1>11233</h1>
+
+			<h1>
+				<marquee direction="left" scrollamount="5">跑馬燈測試</marquee>
+			</h1>
+
 			<div>
 				<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
 					<div class="carousel-indicators">
@@ -84,9 +151,9 @@
 						<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
 						<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
 					</div>
-					<div class="carousel-inner" >
+					<div class="carousel-inner">
 						<div class="carousel-item active" data-bs-interval="3000">
-							<img src="img/door.jpg" class="d-block w-80" alt="馬祖">
+							<img src="img/door.jpg" class="d-block w-100" alt="馬祖">
 							<div class="carousel-caption d-none d-md-block">
 								<h4>馬祖北竿芹壁村</h4>
 								<p>Every night in my dreams.</p>
@@ -118,7 +185,224 @@
 					</button>
 				</div>
 			</div>
+			<br>
+			<h1 style="text-align: center;">布告欄</h1>
+			<div class="container" style="background-color: #f3f5e9; border-radius: 10px;">
+
+				<br>
+				<div class="row">
+					<div class="col">
+						<a href="#page1" class="#page1">徐正泰</a>
+					</div>
+					<div class="col">
+						<a href="#page2" class="#page2">徐正泰</a>
+					</div>
+					<div class="col">
+						3
+					</div>
+					<div class="col">
+						4
+					</div>
+				</div>
+				<br>
+				<div data-role="div" id="page1">
+					<ul>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal">About Me</button>
+							<div class="modal fade" id="exampleModal">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">About Me</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>歡迎來到王小桃部落格</p>
+											<p>用最直白的文字，分享我的旅遊、美食、購物與露營</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal">About Me</button>
+							<div class="modal fade" id="exampleModal">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">About Me</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>歡迎來到王小桃部落格</p>
+											<p>用最直白的文字，分享我的旅遊、美食、購物與露營</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal">About Me</button>
+							<div class="modal fade" id="exampleModal">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">About Me</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>歡迎來到王小桃部落格</p>
+											<p>用最直白的文字，分享我的旅遊、美食、購物與露營</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal">About Me</button>
+							<div class="modal fade" id="exampleModal">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">About Me</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>歡迎來到王小桃部落格</p>
+											<p>用最直白的文字，分享我的旅遊、美食、購物與露營</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div data-role="div" id="page2">
+					<ul>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal">About Me</button>
+							<div class="modal fade" id="exampleModal">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">About Me</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>歡迎來到王小桃部落格</p>
+											<p>用最直白的文字，分享我的旅遊、美食、購物與露營</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal">About Me</button>
+							<div class="modal fade" id="exampleModal">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">About Me</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>歡迎來到王小桃部落格</p>
+											<p>用最直白的文字，分享我的旅遊、美食、購物與露營</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal">About Me</button>
+							<div class="modal fade" id="exampleModal">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">About Me</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>歡迎來到王小桃部落格</p>
+											<p>用最直白的文字，分享我的旅遊、美食、購物與露營</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+
+			<br>
+
+			<div>
+				<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
+						<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+						<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active" data-bs-interval="3000">
+							<img src="img/door.jpg" class="d-block w-100" alt="馬祖">
+							<div class="carousel-caption d-none d-md-block">
+								<h4>馬祖北竿芹壁村</h4>
+								<p>Every night in my dreams.</p>
+							</div>
+						</div>
+
+						<div class="carousel-item" data-bs-interval="3000">
+							<img src="img/door.jpg" class="d-block w-100" alt="巴黎">
+							<div class="carousel-caption d-none d-md-block">
+								<h4>巴黎浪漫街頭</h4>
+								<p>I see you, I feel you.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="img/door.jpg" class="d-block w-100" alt="里斯本">
+							<div class="carousel-caption d-none d-md-block">
+								<h4>里斯本復古電車</h4>
+								<p>That is how I know you go on.</p>
+							</div>
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</div>
+
+
 		</section>
+
 		<!--圖片輪播-->
 
 		<footer>
@@ -126,6 +410,8 @@
 
 			<a href="https://www.youtube.com/@kghs75th_ga" target="_blank" class="a2"><i class="fa-brands fa-youtube fa-fw fa-2x"></i></a>
 			<a href="https://www.google.com.tw/maps/place/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AB%8B%E9%AB%98%E9%9B%84%E5%A5%B3%E5%AD%90%E9%AB%98%E7%B4%9A%E4%B8%AD%E5%AD%B8/@22.6212907,120.2902669,17z/data=!3m1!4b1!4m6!3m5!1s0x346e047ee61e13f5:0xe00ed570cc44f1cb!8m2!3d22.6212858!4d120.2928418!16s%2Fg%2F11bc620l7k?hl=zh-TW&entry=ttu" target="_blank" class="a3"><i class="fa-solid fa-map fa-fw fa-2x"></i></a>
+			<p>電話： 07-xxxxxxx</p>
+			<p>地址： 高雄市前金區</p>
 			<p>Copyright © 高雄女中</p>
 		</footer>
 	</main>
