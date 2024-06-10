@@ -1193,7 +1193,7 @@ strong {
   }
   
   .navbar {
-    background-color: var(--secondary-color);
+    background-color: white;
   }
 
   .navbar-nav .dropdown-menu {
@@ -1285,4 +1285,3 @@ strong {
     padding: 4px 12px;
   }
 }
-

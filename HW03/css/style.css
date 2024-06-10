@@ -246,6 +246,13 @@ h1 {
 	border-top: solid 2px #f7e8dd;
 	border-bottom: solid 2px #f7e8dd;
 }
+
+h2 {
+	position: relative;
+	padding: 0.25em 1em;
+	border-top: solid 2px #f7e8dd;
+	border-bottom: solid 2px #f7e8dd;
+}
 .carousel-inner > .item > img{
 	width: 80%;
 	margin: auto;
@@ -269,36 +276,27 @@ h1:after {
 	right: 10px;
 }
 
-h2 {
-	position: relative;
-	background: #6b9080;
-	padding: 2px 5px 2px 20px;
-	color: #dafbff;
-	border-radius: 0 10px 10px 0;
+h2:before,
+h2:after {
+	content: '';
+	position: absolute;
+	top: -10px;
+	width: 2px;
+	height: -webkit-calc(100% + 20px);
+	height: calc(100% + 20px);
+	background-color: #f7e8dd;
 }
 
 h2:before {
-	font-family: "Font Awesome 6 Free";
-	content: "\f041";
-	display: inline-block;
-	line-height: 40px;
-	position: absolute;
-	padding: 0em;
-	color: white;
-	background: #88a5c1;
-	font-weight: 900;
-	width: 40px;
-	text-align: center;
-	height: 40px;
-	line-height: 40px;
-	left: -1em;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-	border-radius: 50%;
-	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.29);
+	left: 10px;
 }
 
+h2:after {
+	right: 10px;
+}
+
+
+<!--
 h3 {
 	color: #766d6e;
 	border-bottom: double 5px rgb(2, 56, 86, 0.3);
@@ -310,7 +308,7 @@ h3:before {
 	padding-right: 5px;
 	/*文字間距*/
 }
-
+-->
 p {
 	text-align: justify;
 }
@@ -457,4 +455,10 @@ footer p {
 	display: block;
 	height: auto;
 	max-width: 100%;
+}
+
+
+mark.yellow {
+	background: linear-gradient(transparent 40%,rgba(255,255,255,0) 40%, #FFF176 90%,transparent 95%);	
+    padding: 2px 1px;
 }
